@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ — GC Holiday Hire</title>
+  <meta name="description" content="Frequently asked questions about GC Holiday Hire's linen hire and laundry service on the Gold Coast.">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .page-hero {
+      background: linear-gradient(135deg, var(--navy), var(--teal));
+      color: var(--white);
+      padding: 56px 0;
+      text-align: center;
+    }
+    .page-hero h1 { color: var(--white); margin-bottom: 12px; }
+    .page-hero p { opacity: .85; max-width: 500px; margin: 0 auto; }
+
+    .faq-categories {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+    .faq-cat-btn {
+      padding: 8px 20px;
+      border-radius: 100px;
+      border: 1px solid var(--border);
+      background: var(--white);
+      font-size: .88rem;
+      font-weight: 500;
+      cursor: pointer;
+      color: var(--text);
+      transition: background .15s, border-color .15s, color .15s;
+    }
+    .faq-cat-btn.active, .faq-cat-btn:hover {
+      background: var(--navy);
+      border-color: var(--navy);
+      color: var(--white);
+    }
+    .faq-section-title {
+      font-size: .8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: var(--muted);
+      margin: 36px 0 14px;
+    }
+    .faq-section-title:first-child { margin-top: 0; }
+  </style>
+</head>
+<body>
+
+  <div class="announce-bar">
+    <strong>$100 minimum order</strong> &nbsp;·&nbsp; Delivery Mon–Fri, 10am–1:30pm &nbsp;·&nbsp; Southport to Palm Beach
+  </div>
+
+  <header>
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">
+        <img src="images/logo-trans.png" alt="GC Holiday Hire" class="logo-img">
+      </a>
+      <nav id="main-nav">
+        <ul id="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Shop</a></li>
+          <li><a href="faq.html" class="active">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="products.html" class="nav-cta">Order Now</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" onclick="document.getElementById('nav-list').classList.toggle('open')" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="page-hero">
+    <div class="container">
+      <div class="badge">Got Questions?</div>
+      <h1>Frequently Asked Questions</h1>
+      <p>Answers to the most common questions about our linen hire and delivery service. Can't find what you need? <a href="contact.html" style="color:var(--gold)">Email us</a>.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="faq-list">
+
+        <div class="faq-section-title">Delivery &amp; Coverage</div>
+
+        <details open>
+          <summary>Where do you deliver?</summary>
+          <div class="faq-body">
+            We deliver to properties in central Gold Coast from Broadbeach to Palm Beach. The exact coverage depends on the size of your order and whether you're a regular client. <a href="contact.html">Contact us</a> to confirm if we deliver to your location.
+          </div>
+        </details>
+
+        <details>
+          <summary>When do you deliver and pick up?</summary>
+          <div class="faq-body">
+            We deliver 5 days a week, Monday to Friday, between 10:00am and 1:30pm — timed to fit in between guest check-out and check-in. We can sometimes deliver earlier than 10am, but please contact us to confirm.
+          </div>
+        </details>
+
+        <details>
+          <summary>Do I have to be there when you deliver?</summary>
+          <div class="faq-body">
+            No, you don't need to be onsite. For Airbnb and holiday homes, we can leave the linen inside the gate or at the doorstep. For motels and resorts, we may require a fob for access. We do a 'swap over' — picking up used linen and dropping off a fresh batch at the same time.
+          </div>
+        </details>
+
+        <details>
+          <summary>Do you deliver to high-rise buildings?</summary>
+          <div class="faq-body">
+            We do not deliver to high-rise or low-rise buildings unless you are the onsite manager. If you place an order and pay for it before checking this, credit card and PayPal charges will not be refunded.
+          </div>
+        </details>
+
+        <details>
+          <summary>Can I pick up linen instead of having it delivered?</summary>
+          <div class="faq-body">
+            No, sorry — we only offer delivery. We do not have a pick-up service.
+          </div>
+        </details>
+
+        <div class="faq-section-title">Ordering</div>
+
+        <details>
+          <summary>Who do you deliver to?</summary>
+          <div class="faq-body">
+            We provide our linen hire and laundry service to: holiday home owners, housekeepers/cleaners, cleaning companies, Airbnb managers, real estate companies, resorts, and hotels.
+          </div>
+        </details>
+
+        <details>
+          <summary>Is there a minimum order?</summary>
+          <div class="faq-body">
+            Yes, there is a <strong>$100 minimum order</strong> on all orders.
+          </div>
+        </details>
+
+        <details>
+          <summary>Is there a delivery fee?</summary>
+          <div class="faq-body">
+            Yes, we charge a flat <strong>$14 fee</strong> to drop off your clean linen and pick up your dirty linen. This covers both the drop-off and pick-up in a single visit. There is also a 2% processing fee on all transactions.
+          </div>
+        </details>
+
+        <details>
+          <summary>What payment methods do you accept?</summary>
+          <div class="faq-body">
+            We accept Visa, Mastercard, PayPal, and EFT. Please note there is a small 2% processing fee on all orders.
+          </div>
+        </details>
+
+        <details>
+          <summary>How much notice do I need before receiving linen?</summary>
+          <div class="faq-body">
+            <strong>New clients:</strong> Please allow at least 3 business days.<br>
+            <strong>Existing clients:</strong> At least 2 business days (48 hours) for regular weekly deliveries.<br>
+            For example, if you need delivery on a Monday, you must place your order by 10am the Thursday before.
+          </div>
+        </details>
+
+        <details>
+          <summary>How do I place an order?</summary>
+          <div class="faq-body">
+            Visit our <a href="products.html">Shop page</a>, select your individual linen requirements, and check out. You must read and accept our <a href="terms.html">Terms &amp; Conditions</a> before placing an order.
+          </div>
+        </details>
+
+        <div class="faq-section-title">Linen &amp; Quality</div>
+
+        <details>
+          <summary>What items do you deliver?</summary>
+          <div class="faq-body">
+            We deliver fresh pressed, hotel-style commercial bed linen and amenities for your accommodation. We have 19 individual items available including bath towels, hand towels, bed sheets, pillowcases, bath mats, pool towels, tea towels, and more. View the full range on our <a href="products.html">Shop page</a>.
+          </div>
+        </details>
+
+        <details>
+          <summary>Is your linen professionally cleaned?</summary>
+          <div class="faq-body">
+            Yes. All of our linen is professionally commercially laundered and pressed to be fully compliant with Australian Standards. You're getting the same quality used by leading hotels and resorts.
+          </div>
+        </details>
+
+        <details>
+          <summary>Can I wash the linen myself?</summary>
+          <div class="faq-body">
+            No. Linen must <strong>not</strong> be laundered in any form and must be returned for professional laundering only. Washing the linen yourself will damage the fabric and may result in replacement charges.
+          </div>
+        </details>
+
+        <div class="faq-section-title">Returns &amp; Hire Period</div>
+
+        <details>
+          <summary>What is the maximum hire period?</summary>
+          <div class="faq-body">
+            The maximum hire period is <strong>14 days</strong>. If you need linen for longer, you will need to re-order a changeover. Linen kept beyond 14 days without a re-order will be charged at 3 times the price of the linen not returned.
+          </div>
+        </details>
+
+        <details>
+          <summary>Am I penalised if linen isn't returned on time?</summary>
+          <div class="faq-body">
+            We need to receive linen back on the day your guests check out, as linen can turn mouldy if left too long. Extra charges may apply if linen is not returned on the agreed date. Soiled linen must not be held for more than 5 days.
+          </div>
+        </details>
+
+        <details>
+          <summary>How should I return dirty linen?</summary>
+          <div class="faq-body">
+            All dirty linen must be placed back in the linen bags provided, ready for collection. Linen bags must not be overfilled. When ordering online, the system calculates how many bags you will need to return the full order.
+          </div>
+        </details>
+
+        <details>
+          <summary>What happens if linen is lost or stolen by a guest?</summary>
+          <div class="faq-body">
+            You agree to monitor all linen and charge guests the replacement costs of any stolen or lost items. You must then notify us and forward the funds to us so we can replace the items.
+          </div>
+        </details>
+
+      </div>
+
+      <div style="text-align:center; margin-top:48px; padding: 36px; background: var(--light); border-radius: var(--radius); border: 1px solid var(--border);">
+        <h3 style="margin-bottom:10px;">Still have a question?</h3>
+        <p style="color:var(--muted); margin-bottom:20px;">If your question isn't answered here, we're happy to help.</p>
+        <a href="contact.html" class="btn btn-dark">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="images/logo-trans.png" alt="GC Holiday Hire" class="footer-logo-img">
+          <p>Providing commercially clean, fresh pressed hotel linen to the Gold Coast for over 10 years. Open Mon–Fri, 9am–4pm.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Shop</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="terms.html">Terms &amp; Conditions</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Delivery Area</h4>
+          <p>Southport to Palm Beach, Mon–Fri 10am–1:30pm. Out-of-area enquiries welcome.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <p>
+            Burleigh Heads, Gold Coast QLD 4220<br><br>
+            <a href="mailto:info@gcholidayhire.com.au">info@gcholidayhire.com.au</a><br><br>
+            Mon–Fri, 9:00am – 4:00pm
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2024 GC Holiday Hire. All rights reserved.</span>
+        <a href="terms.html" style="color:rgba(255,255,255,.4)">Terms &amp; Conditions</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

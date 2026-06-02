@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — GC Holiday Hire</title>
+  <meta name="description" content="Contact GC Holiday Hire for linen hire and laundry services on the Gold Coast. Burleigh Heads, QLD.">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .page-hero {
+      background: linear-gradient(135deg, var(--navy), var(--teal));
+      color: var(--white);
+      padding: 56px 0;
+      text-align: center;
+    }
+    .page-hero h1 { color: var(--white); margin-bottom: 12px; }
+    .page-hero p { opacity: .85; max-width: 500px; margin: 0 auto; }
+  </style>
+</head>
+<body>
+
+  <div class="announce-bar">
+    <strong>$100 minimum order</strong> &nbsp;·&nbsp; Delivery Mon–Fri, 10am–1:30pm &nbsp;·&nbsp; Southport to Palm Beach
+  </div>
+
+  <header>
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">
+        <img src="images/logo-trans.png" alt="GC Holiday Hire" class="logo-img">
+      </a>
+      <nav id="main-nav">
+        <ul id="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Shop</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+          <li><a href="products.html" class="nav-cta">Order Now</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" onclick="document.getElementById('nav-list').classList.toggle('open')" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="page-hero">
+    <div class="container">
+      <div class="badge">Get in Touch</div>
+      <h1>Contact Us</h1>
+      <p>Have a question or need more information? We're open Monday to Friday, 9am–4pm.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- Info -->
+        <div class="contact-info">
+          <h2>We'd Love to Hear From You</h2>
+          <p>
+            Whether you're a new customer wanting to know if we deliver to your area, an existing client with a question about your order, or a property manager looking for a reliable linen solution — we're here to help.
+          </p>
+
+          <div class="contact-detail">
+            <div class="contact-detail-icon">📍</div>
+            <div>
+              <strong>Address</strong>
+              Burleigh Heads, Gold Coast, QLD 4220, Australia
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="contact-detail-icon">✉️</div>
+            <div>
+              <strong>Email</strong>
+              <a href="mailto:info@gcholidayhire.com.au">info@gcholidayhire.com.au</a>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="contact-detail-icon">🕙</div>
+            <div>
+              <strong>Office Hours</strong>
+              Monday – Friday, 9:00am – 4:00pm<br>
+              <span style="color:var(--muted); font-size:.88rem;">We respond to enquiries within 1 business day</span>
+            </div>
+          </div>
+
+          <div class="contact-detail">
+            <div class="contact-detail-icon">🚚</div>
+            <div>
+              <strong>Delivery Hours</strong>
+              Monday – Friday, 10:00am – 1:30pm<br>
+              <span style="color:var(--muted); font-size:.88rem;">Southport to Palm Beach</span>
+            </div>
+          </div>
+
+          <div style="margin-top:32px; padding: 20px; background: var(--sand); border-radius: var(--radius); border: 1px solid #e0d0b0;">
+            <strong>Already a customer?</strong>
+            <p style="margin-top:6px; font-size:.9rem; color:var(--muted);">
+              To place a new order, visit our <a href="products.html">Shop page</a>. Please remember to allow at least 48 hours notice for existing clients. Read our <a href="faq.html">FAQ</a> for answers to common questions.
+            </p>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <div class="contact-form">
+          <h3>Send Us a Message</h3>
+          <form action="mailto:info@gcholidayhire.com.au" method="post" enctype="text/plain">
+            <div class="form-group">
+              <label for="name">Full Name *</label>
+              <input type="text" id="name" name="name" placeholder="Your full name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" placeholder="your@email.com" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="(07) xxxx xxxx">
+            </div>
+            <div class="form-group">
+              <label for="type">Enquiry Type</label>
+              <select id="type" name="type">
+                <option value="">Select an option...</option>
+                <option value="new-customer">New customer enquiry</option>
+                <option value="delivery">Delivery area question</option>
+                <option value="order">Order question</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message *</label>
+              <textarea id="message" name="message" placeholder="Tell us about your property and requirements..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-dark" style="width:100%;">Send Message</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Area Map Visual -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-title">
+        <h2>Our Delivery Area</h2>
+        <p>We deliver across central Gold Coast, Monday to Friday. Out-of-area enquiries are welcome.</p>
+      </div>
+      <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(140px,1fr)); gap:16px; max-width:700px; margin:0 auto;">
+        <div class="serve-item"><span>📍</span>Southport</div>
+        <div class="serve-item"><span>📍</span>Surfers Paradise</div>
+        <div class="serve-item"><span>📍</span>Broadbeach</div>
+        <div class="serve-item"><span>📍</span>Mermaid Beach</div>
+        <div class="serve-item"><span>📍</span>Burleigh Heads</div>
+        <div class="serve-item"><span>📍</span>Palm Beach</div>
+      </div>
+      <p style="text-align:center; margin-top:20px; color:var(--muted); font-size:.9rem;">Outside this area? Send us an enquiry — we accept out-of-area requests depending on order size.</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="images/logo-trans.png" alt="GC Holiday Hire" class="footer-logo-img">
+          <p>Providing commercially clean, fresh pressed hotel linen to the Gold Coast for over 10 years. Open Mon–Fri, 9am–4pm.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Shop</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="terms.html">Terms &amp; Conditions</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Delivery Area</h4>
+          <p>Southport to Palm Beach, Mon–Fri 10am–1:30pm. Out-of-area enquiries welcome.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <p>
+            Burleigh Heads, Gold Coast QLD 4220<br><br>
+            <a href="mailto:info@gcholidayhire.com.au">info@gcholidayhire.com.au</a><br><br>
+            Mon–Fri, 9:00am – 4:00pm
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2024 GC Holiday Hire. All rights reserved.</span>
+        <a href="terms.html" style="color:rgba(255,255,255,.4)">Terms &amp; Conditions</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

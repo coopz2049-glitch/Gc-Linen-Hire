@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Individual Linen Items — GC Holiday Hire</title>
+  <meta name="description" content="Hire individual hotel-quality linen items for your Gold Coast holiday accommodation. All items commercially laundered and pressed.">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .products-page-hero {
+      background: linear-gradient(135deg, var(--navy), var(--teal));
+      color: var(--white);
+      padding: 56px 0;
+      text-align: center;
+    }
+    .products-page-hero h1 { color: var(--white); margin-bottom: 12px; }
+    .products-page-hero p { opacity: .85; max-width: 500px; margin: 0 auto; }
+
+    .order-note {
+      background: var(--sand);
+      border: 1px solid #e0d0b0;
+      border-radius: var(--radius);
+      padding: 18px 22px;
+      margin-bottom: 32px;
+      font-size: .92rem;
+      color: var(--text);
+    }
+    .order-note strong { color: var(--navy); }
+
+    .filter-bar {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 32px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .filter-btn {
+      padding: 7px 18px;
+      border-radius: 100px;
+      border: 1px solid var(--border);
+      background: var(--white);
+      font-size: .85rem;
+      font-weight: 500;
+      cursor: pointer;
+      color: var(--text);
+      transition: background .15s, border-color .15s, color .15s;
+    }
+    .filter-btn.active, .filter-btn:hover {
+      background: var(--navy);
+      border-color: var(--navy);
+      color: var(--white);
+    }
+
+    .product-card-full {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px 20px;
+      text-align: center;
+      box-shadow: var(--shadow);
+      transition: transform .2s, box-shadow .2s, border-color .2s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .product-card-full:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); border-color: var(--gold); }
+    .product-card-full .product-icon { font-size: 2.2rem; margin-bottom: 14px; }
+    .product-card-full h3 { font-size: .95rem; color: var(--text); margin-bottom: 6px; }
+    .product-card-full .product-price { font-size: 1.4rem; font-weight: 800; color: var(--navy); margin-top: auto; padding-top: 10px; }
+
+    .price-note {
+      text-align: center;
+      color: var(--muted);
+      font-size: .85rem;
+      margin-top: 12px;
+    }
+
+    .category-heading {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      margin: 40px 0 16px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--border);
+    }
+    .category-heading:first-of-type { margin-top: 0; }
+
+    .products-layout {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+    .sidebar {
+      background: var(--light);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      position: sticky;
+      top: 88px;
+    }
+    .sidebar h3 { font-size: .85rem; text-transform: uppercase; letter-spacing: .07em; color: var(--muted); margin-bottom: 16px; }
+    .sidebar ul { list-style: none; }
+    .sidebar li { margin-bottom: 8px; }
+    .sidebar a { font-size: .9rem; color: var(--text); display: flex; justify-content: space-between; padding: 6px 8px; border-radius: 6px; }
+    .sidebar a:hover, .sidebar a.active { background: var(--sand); color: var(--navy); }
+    .sidebar .count { color: var(--muted); font-size: .82rem; }
+
+    .sidebar-info {
+      margin-top: 24px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+    }
+    .sidebar-info-item {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      margin-bottom: 14px;
+      font-size: .85rem;
+      color: var(--muted);
+    }
+    .sidebar-info-item strong { color: var(--text); display: block; }
+
+    @media (max-width: 768px) {
+      .products-layout { grid-template-columns: 1fr; }
+      .sidebar { position: static; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="announce-bar">
+    <strong>$100 minimum order</strong> &nbsp;·&nbsp; Delivery Mon–Fri, 10am–1:30pm &nbsp;·&nbsp; Southport to Palm Beach
+  </div>
+
+  <header>
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">
+        <img src="images/logo-trans.png" alt="GC Holiday Hire" class="logo-img">
+      </a>
+      <nav id="main-nav">
+        <ul id="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html" class="active">Shop</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="products.html" class="nav-cta">Order Now</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" onclick="document.getElementById('nav-list').classList.toggle('open')" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="products-page-hero">
+    <div class="container">
+      <div class="badge">19 Items Available</div>
+      <h1>Individual Linen Items</h1>
+      <p>Select exactly what you need for your property. All items are commercially laundered, fresh pressed, and ready to impress your guests.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+
+      <div class="order-note">
+        <strong>How to order:</strong> Select your individual items below, then check out and pay securely by PayPal, Visa, Mastercard, or EFT. There is a <strong>$100 minimum order</strong> on all orders. A <strong>$14 delivery fee</strong> applies (includes drop-off and pick-up). Please allow at least <strong>48 business hours</strong> notice for existing clients, or 3 business days for new clients. You must read our <a href="terms.html">Terms &amp; Conditions</a> before placing an order.
+      </div>
+
+      <div class="products-layout">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+          <h3>Categories</h3>
+          <ul>
+            <li><a href="#towels" class="active">Towels <span class="count">5</span></a></li>
+            <li><a href="#bath">Bath Accessories <span class="count">2</span></a></li>
+            <li><a href="#sheets">Sheets <span class="count">8</span></a></li>
+            <li><a href="#pillows">Pillowcases <span class="count">2</span></a></li>
+            <li><a href="#kitchen">Kitchen <span class="count">1</span></a></li>
+            <li><a href="#pool">Pool <span class="count">1</span></a></li>
+          </ul>
+
+          <div class="sidebar-info">
+            <h3>Order Info</h3>
+            <div class="sidebar-info-item">
+              <span>📦</span>
+              <div><strong>Minimum Order</strong>$100</div>
+            </div>
+            <div class="sidebar-info-item">
+              <span>🚚</span>
+              <div><strong>Delivery Fee</strong>$14 (incl. pick-up)</div>
+            </div>
+            <div class="sidebar-info-item">
+              <span>💳</span>
+              <div><strong>Payment</strong>Visa, MC, PayPal, EFT</div>
+            </div>
+            <div class="sidebar-info-item">
+              <span>⚠️</span>
+              <div><strong>2% processing fee</strong> on all orders</div>
+            </div>
+            <div class="sidebar-info-item">
+              <span>📅</span>
+              <div><strong>Max Hire Period</strong>14 days</div>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Products -->
+        <div>
+          <div class="category-heading" id="towels">Towels</div>
+          <div class="products-grid">
+            <div class="product-card-full">
+              <img src="images/towels-300x300.jpg" alt="Bath Towel" class="product-img-sm">
+              <h3>Bath Towel</h3>
+              <div class="product-price"><sup>$</sup>2.86</div>
+            </div>
+            <div class="product-card-full">
+              <img src="images/towels-300x300.jpg" alt="Premium Bath Towel" class="product-img-sm">
+              <h3>Premium Bath Towel</h3>
+              <div class="product-badge">Premium</div>
+              <div class="product-price"><sup>$</sup>3.40</div>
+            </div>
+            <div class="product-card-full">
+              <img src="images/Hand-Towels-2-200x200.jpg" alt="Hand Towel" class="product-img-sm">
+              <h3>Hand Towel</h3>
+              <div class="product-price"><sup>$</sup>2.20</div>
+            </div>
+            <div class="product-card-full">
+              <img src="images/Hand-Towels-2-200x200.jpg" alt="Premium Hand Towel" class="product-img-sm">
+              <h3>Premium Hand Towel</h3>
+              <div class="product-badge">Premium</div>
+              <div class="product-price"><sup>$</sup>2.30</div>
+            </div>
+            <div class="product-card-full">
+              <img src="images/Face-Towels-Hotel-Collection-600gsm-to-700gsm-2-500x333-200x200.jpg" alt="Premium Face Washer" class="product-img-sm">
+              <h3>Premium Face Washer</h3>
+              <div class="product-badge">Premium</div>
+              <div class="product-price"><sup>$</sup>2.25</div>
+            </div>
+          </div>
+
+          <div class="category-heading" id="bath">Bath Accessories</div>
+          <div class="products-grid">
+            <div class="product-card-full">
+              <img src="images/bathmat-300x300.jpg" alt="Bath Mat" class="product-img-sm">
+              <h3>Bath Mat</h3>
+              <div class="product-price"><sup>$</sup>2.60</div>
+            </div>
+            <div class="product-card-full">
+              <img src="images/bathmat-300x300.jpg" alt="Premium Bath Mat" class="product-img-sm">
+              <h3>Premium Bath Mat</h3>
+              <div class="product-badge">Premium</div>
+              <div class="product-price"><sup>$</sup>3.05</div>
+            </div>
+          </div>
+
+          <div class="category-heading" id="sheets">Bed Sheets</div>
+          <div class="products-grid">
+            <div class="product-card-full">
+              <img src="images/sheets-200x200.jpg" alt="Single King Flat Sheet" class="product-img-sm">
+              <h3>Single King Flat Sheet</h3>
+              <div class="product-price"><sup>$</sup>4.54</div>
+            </div>
+            <div class="product-card-full">
+              <img src="images/Fairfield-BabyBlue-Flat-Sheet_530x-200x200.png" alt="Premium Single King Flat Sheet" class="product-img-sm">
+              <h3>Premium Single King Flat Sheet</h3>
+              <div class="product-badge">Premium</div>
+              <div class="product-price"><sup>$</sup>5.20</div>
+            </div>
+            <div class="product-card-full">
+              <img src="images/QuuenStriped-Sheets-1000x1000-300x300.jpg" alt="Premium Single King Satin Stripe Sheet" class="product-img-sm">
+              <h3>Premium Single King Satin Stripe Sheet</h3>
+              <div class="product-badge">Premium</div>
+              <div class="product-price"><sup>$</sup>4.82</div>
+            </div>
+            <div class="product-card-full">
+              <img src="images/sheets-200x200.jpg" alt="Queen Flat Sheet" class="product-img-sm">
+              <h3>Queen Flat Sheet</h3>
+              <div class="product-price"><sup>$</sup>5.08</div>
+            </div>
+            <div class="product-card-full">
+              <img src="images/Fairfield-BabyBlue-Flat-Sheet_530x-200x200.png" alt="Premium Queen Flat Sheet" class="product-img-sm">
+              <h3>Premium Queen Flat Sheet</h3>
+              <div class="product-badge">Premium</div>
+              <div class="product-price"><sup>$</sup>5.65</div>
+            </div>
+            <div class="product-card-full">
+              <img src="images/QuuenStriped-Sheets-1000x1000-300x300.jpg" alt="Premium Queen Satin Stripe Sheet" class="product-img-sm">
+              <h3>Premium Queen Satin Stripe Sheet</h3>
+              <div class="product-badge">Premium</div>
+              <div class="product-price"><sup>$</sup>5.65</div>
+            </div>
+            <div class="product-card-full">
+              <img src="images/1888-mills-white-king-fitted-sheet-24.gif-200x200.jpg" alt="Premium King Flat Sheet" class="product-img-sm">
+              <h3>Premium King Flat Sheet</h3>
+              <div class="product-badge">Premium</div>
+              <div class="product-price"><sup>$</sup>5.87</div>
+            </div>
+            <div class="product-card-full">
+              <img src="images/QuuenStriped-Sheets-1000x1000-300x300.jpg" alt="Premium King Satin Stripe Sheet" class="product-img-sm">
+              <h3>Premium King Satin Stripe Sheet</h3>
+              <div class="product-badge">Premium</div>
+              <div class="product-price"><sup>$</sup>5.90</div>
+            </div>
+          </div>
+
+          <div class="category-heading" id="pillows">Pillowcases</div>
+          <div class="products-grid">
+            <div class="product-card-full">
+              <img src="images/pillowcase_-200x200.jpg" alt="Pillow Cases" class="product-img-sm">
+              <h3>Pillow Cases</h3>
+              <div class="product-price"><sup>$</sup>2.65</div>
+            </div>
+            <div class="product-card-full">
+              <img src="images/pillowcase_-200x200.jpg" alt="Premium Pillow Cases" class="product-img-sm">
+              <h3>Premium Pillow Cases</h3>
+              <div class="product-badge">Premium</div>
+              <div class="product-price"><sup>$</sup>3.15</div>
+            </div>
+          </div>
+
+          <div class="category-heading" id="kitchen">Kitchen</div>
+          <div class="products-grid">
+            <div class="product-card-full">
+              <img src="images/teatowel2-200x183.jpg" alt="Premium Tea Towel" class="product-img-sm">
+              <h3>Premium Tea Towel</h3>
+              <div class="product-badge">Premium</div>
+              <div class="product-price"><sup>$</sup>2.25</div>
+            </div>
+          </div>
+
+          <div class="category-heading" id="pool">Pool</div>
+          <div class="products-grid">
+            <div class="product-card-full">
+              <img src="images/beach-towel-200x200.jpg" alt="Pool Towel" class="product-img-sm">
+              <h3>Pool Towel</h3>
+              <div class="product-price"><sup>$</sup>3.72</div>
+            </div>
+          </div>
+
+          <p class="price-note">All prices are per item, per hire. A $14 delivery &amp; pick-up fee and 2% processing fee applies to each order.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Questions Before You Order?</h2>
+      <p>Check our FAQ for answers about delivery, ordering, and more — or get in touch directly.</p>
+      <div class="cta-btns">
+        <a href="faq.html" class="btn btn-primary">Read the FAQ</a>
+        <a href="contact.html" class="btn btn-outline">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="images/logo-trans.png" alt="GC Holiday Hire" class="footer-logo-img">
+          <p>Providing commercially clean, fresh pressed hotel linen to the Gold Coast for over 10 years. Open Mon–Fri, 9am–4pm.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Shop</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="terms.html">Terms &amp; Conditions</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Delivery Area</h4>
+          <p>Southport to Palm Beach, Mon–Fri 10am–1:30pm. Out-of-area enquiries welcome.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <p>
+            Burleigh Heads, Gold Coast QLD 4220<br><br>
+            <a href="mailto:info@gcholidayhire.com.au">info@gcholidayhire.com.au</a><br><br>
+            Mon–Fri, 9:00am – 4:00pm
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2024 GC Holiday Hire. All rights reserved.</span>
+        <a href="terms.html" style="color:rgba(255,255,255,.4)">Terms &amp; Conditions</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

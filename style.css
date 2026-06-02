@@ -211,8 +211,11 @@ nav a:hover, nav a.active {
 /* ── Services Grid ────────────────────────────────────── */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 24px;
+}
+@media (max-width: 640px) {
+  .services-grid { grid-template-columns: 1fr; }
 }
 
 .service-card {
@@ -222,6 +225,8 @@ nav a:hover, nav a.active {
   padding: 32px 28px;
   box-shadow: var(--shadow);
   transition: transform .2s, box-shadow .2s;
+  display: flex;
+  flex-direction: column;
 }
 .service-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
 
@@ -232,6 +237,7 @@ nav a:hover, nav a.active {
   display: grid; place-items: center;
   font-size: 1.5rem;
   margin-bottom: 18px;
+  flex-shrink: 0;
 }
 
 .service-card h3 { margin-bottom: 8px; }
@@ -338,19 +344,23 @@ nav a:hover, nav a.active {
   background: var(--white);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 24px 20px;
+  padding: 20px;
   text-align: center;
   box-shadow: var(--shadow);
   transition: transform .2s, box-shadow .2s, border-color .2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .product-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); border-color: var(--gold); }
 
 .product-icon { font-size: 2rem; margin-bottom: 12px; }
-.product-card h3 { font-size: .95rem; margin-bottom: 8px; color: var(--text); }
+.product-card h3 { font-size: .95rem; color: var(--text); flex: 1; display: flex; align-items: center; justify-content: center; margin: 8px 0; }
 .product-price {
   font-size: 1.3rem;
   font-weight: 700;
   color: var(--navy);
+  margin-top: auto;
 }
 .product-price sup { font-size: .7em; vertical-align: top; margin-top: 4px; }
 .product-badge {
@@ -363,24 +373,43 @@ nav a:hover, nav a.active {
   text-transform: uppercase;
   padding: 2px 8px;
   border-radius: 100px;
-  margin-bottom: 6px;
+  min-height: 20px;
 }
 
 /* ── Info Strip ───────────────────────────────────────── */
 .info-strip {
   background: var(--navy);
   color: var(--white);
-  padding: 48px 0;
+  padding: 0;
+  border-top: 3px solid var(--gold);
 }
 .info-strip-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 32px;
+  grid-template-columns: repeat(5, 1fr);
   text-align: center;
 }
-.info-item-icon { font-size: 1.8rem; margin-bottom: 10px; }
-.info-item-value { font-size: 1.3rem; font-weight: 700; }
-.info-item-label { font-size: .82rem; opacity: .7; margin-top: 4px; letter-spacing: .04em; text-transform: uppercase; }
+@media (max-width: 768px) {
+  .info-strip-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 480px) {
+  .info-strip-grid { grid-template-columns: repeat(2, 1fr); }
+}
+.info-strip-grid > div {
+  padding: 28px 16px;
+  border-right: 1px solid rgba(255,255,255,.1);
+  position: relative;
+}
+.info-strip-grid > div:last-child { border-right: none; }
+.info-item-icon {
+  width: 36px; height: 36px;
+  background: rgba(255,255,255,.1);
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 10px;
+  font-size: .95rem;
+}
+.info-item-value { font-size: 1.4rem; font-weight: 800; letter-spacing: -.01em; color: var(--white); }
+.info-item-label { font-size: .72rem; opacity: .6; margin-top: 4px; letter-spacing: .06em; text-transform: uppercase; }
 
 /* ── FAQ ──────────────────────────────────────────────── */
 .faq-list { max-width: 720px; margin: 0 auto; }

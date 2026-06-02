@@ -240,8 +240,11 @@ nav a:hover, nav a.active {
 /* ── Who We Serve ─────────────────────────────────────── */
 .serve-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+}
+@media (max-width: 600px) {
+  .serve-grid { grid-template-columns: repeat(2, 1fr); }
 }
 .serve-item {
   background: var(--white);
